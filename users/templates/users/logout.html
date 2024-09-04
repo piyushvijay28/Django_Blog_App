@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+
+{% comment %} {% block content %}
+    <h2>You have been Logged out</h2>
+    <div class="border-top pt-3">
+        <small>
+            Login to Account <a class="ml-2" href="{% url 'login'%}">Login</a>
+        </small>
+    </div>
+{% endblock content %} {% endcomment %}
+
+
+{% comment %} {% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="mb-4">You have been Logged out</h2>
+    <div class="border-top pt-3 mt-4">
+        <small class="text-muted">
+            Login to Your Account <a href="{% url 'login' %}" class="btn btn-link">Login</a>
+        </small>
+    </div>
+</div>
+{% endblock content %} {% endcomment %}
+
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="mb-4">You have been logged out</h2> 
+    <div class="d-flex justify-content-center mb-4">
+        <a href="{% url 'login' %}" class="btn btn-primary mx-2">Log In</a>
+        <a href="{% url 'blog-home' %}" class="btn btn-secondary mx-2">Go to Home</a>
+    </div>
+</div>
+{% endblock content %}

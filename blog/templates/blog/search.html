@@ -1,0 +1,82 @@
+{% extends "blog/base.html" %}
+{% comment %} {% block content %}
+    <h2>Search Results for "{{ query }}"</h2>
+
+    <h3>Users</h3>
+    {% if users %}
+        <ul>
+        {% for user in users %}
+            <img class="img-fluid rounded-circle" src="{{ user.profile.image.url }}" alt="Profile Image" style="max-width: 40px;">
+            <a class="text-decoration-none fs-4" href="{% url 'user-posts' user.username %}">{{ user.username }}</a>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No users found.</p>
+    {% endif %}
+
+    <h3>Posts</h3>
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li>
+                
+                <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a> - by {{ post.author }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No posts found.</p>
+    {% endif %}
+{% endblock %} {% endcomment %}
+
+
+{% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-4">Search Results for "{{ query }}"</h2>
+
+        <div class="row">
+            <!-- Users Section -->
+            <div class="col-md-6">
+                <h3 class="mb-3">Users</h3>
+                {% if users %}
+                    <ul class="list-unstyled">
+                    {% for user in users %}
+                        <li class="d-flex align-items-center mb-3">
+                            <img class="img-fluid rounded-circle" 
+                                 src="{{ user.profile.image.url }}" 
+                                 alt="Profile Image" 
+                                 style="max-width: 50px; margin-right: 10px;">
+                            <a class=" fs-5 text-dark" 
+                               href="{% url 'user-posts' user.username %}">
+                               {{ user.username }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No users found.</p>
+                {% endif %}
+            </div>
+
+            <!-- Posts Section -->
+            <div class="col-md-6">
+                <h3 class="mb-3">Posts</h3>
+                {% if posts %}
+                    <ul class="list-unstyled">
+                    {% for post in posts %}
+                        <li class="mb-3">
+                            <a class="fs-5 text-dark" 
+                               href="{% url 'post-detail' post.id %}">
+                               {{ post.title }}
+                            </a>
+                            <span class="text-muted"> - by {{ post.author }}</span>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No posts found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
