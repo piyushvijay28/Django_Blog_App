@@ -138,35 +138,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'piyusvijay1947@gmail.com'
-# EMAIL_HOST_PASSWORD = 'lfzt fmjf tbot tpbi'
-
-# EMAIL_BACKEND = 'mailjet_backend.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'in-v3.mailjet.com'
-# EMAIL_HOST = 'smtp.mailjet.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# MAILJET_API_KEY = '651ef03f278e37b9404d3ef78e67360d'  
-# MAILJET_API_SECRET = '61d0e55e2bc98c9434fafd840ae12e93'
-
-EMAIL_BACKEND = 'gmailapi_backend.mail.GmailBackend'
-GMAIL_API_CLIENT_ID = '13735081034-he8a3f3g1rc5lrvadt7vrkri8khgrk7l.apps.googleusercontent.com'
-GMAIL_API_CLIENT_SECRET = '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'
-GMAIL_API_REFRESH_TOKEN = 'refresh_token'
-
-# 13735081034-he8a3f3g1rc5lrvadt7vrkri8khgrk7l.apps.googleusercontent.com
-
-# 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
-
-
-# gmail_oauth2 --generate_oauth2_token \
-#   --client_id="13735081034-he8a3f3g1rc5lrvadt7vrkri8khgrk7l.apps.googleusercontent.com" \
-#   --client_secret="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" \
-#   --scope="https://www.googleapis.com/auth/gmail.send"
-
-# gmail_oauth2 --generate_oauth2_token --client_id="13735081034-he8a3f3g1rc5lrvadt7vrkri8khgrk7l.apps.googleusercontent.com" --client_secret="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" --scope="https://www.googleapis.com/auth/gmail.send"
