@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-6l(68d@h&-=&@f7fd4l_$nbt#(@37=e0c-&sa_ii#b9c8i^=cr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+
 
 
 # Application definition
@@ -87,6 +89,17 @@ DATABASES = {
     }
 }
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'django_blog',
+#         'USER': 'piyush',
+#         'PASSWORD': '7976295703tushar',
+#         'HOST': 'database-1-blog.c5sgs2c4euio.eu-north-1.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
