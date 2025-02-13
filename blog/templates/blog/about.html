@@ -1,6 +1,33 @@
 {% extends "blog/base.html" %}
 {% block content %}
+    <div class="content-section">
+        <h2>About Django Blog</h2>
+        <p class="text-muted">
+            Welcome to Django Blog! This platform is designed to help users share their thoughts, ideas, and experiences
+            with the world. Built using Django, Bootstrap, and various modern web technologies, our blog ensures a smooth
+            and user-friendly experience.
+        </p>
+        
+        <h3>Features</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">User Authentication & Profiles</li>
+            <li class="list-group-item">Create, Update, and Delete Posts</li>
+            <li class="list-group-item">Responsive Design with Bootstrap</li>
+            <li class="list-group-item">Post Search and Filtering</li>
+            <li class="list-group-item">Secure and Scalable Architecture</li>
+        </ul>
 
-    <h1>About Blog Page!!</h1>
-    
+        <h3 class="mt-4">About the Developer</h3>
+        <p class="text-muted">
+            Hi, I'm Piyush Vijay, a passionate Django developer. I love building web applications and exploring the world of DevOps.
+            You can connect with me through the links below.
+        </p>
+    </div>
 {% endblock content %}
+
+        {% comment %} {% extends "blog/base.html" %}
+        {% block content %}
+        
+            <h1>About Blog Page!!</h1>
+            
+        {% endblock content %} {% endcomment %}
